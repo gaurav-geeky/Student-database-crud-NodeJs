@@ -16,7 +16,7 @@ function Search() {
         let api = `${import.meta.env.VITE_BACKEND_URL}/search`;
         const response = await axios.post(api, { rollno: rollno });
         setMydata(response.data);
-        setRollno(""); 
+        setRollno("");
     };
 
     // Table rows stored in variable
@@ -66,31 +66,33 @@ function Search() {
             <hr className="mb-6" />
 
             {/* RESULT TABLE */}
-            {mydata.length > 0 ? (
-                <div className="overflow-x-auto flex justify-center">
-                    <table className="border border-gray-300 shadow-md rounded-lg w-full max-w-3xl text-lg">
+            {
+                mydata.length > 0 ? (
+                    <div className="overflow-x-auto flex justify-center">
+                        <table className="border border-gray-300 shadow-md rounded-lg w-full max-w-3xl text-lg">
 
-                        <thead>
-                            <tr className="bg-indigo-100 text-indigo-800 font-semibold text-center">
-                                <th className="border p-3">Roll No.</th>
-                                <th className="border p-3">Name</th>
-                                <th className="border p-3">City</th>
-                                <th className="border p-3">Fees</th>
-                            </tr>
-                        </thead>
+                            <thead>
+                                <tr className="bg-indigo-100 text-indigo-800 font-semibold text-center">
+                                    <th className="border p-3">Roll No.</th>
+                                    <th className="border p-3">Name</th>
+                                    <th className="border p-3">City</th>
+                                    <th className="border p-3">Fees</th>
+                                </tr>
+                            </thead>
 
-                        <tbody>{rows}</tbody>
-                    </table>
-                </div>
-            ) : (
-                <p className="text-center text-gray-500 mt-6 text-lg">
-                    No student data found. Try searching by a valid roll number.
-                </p>
-            )}
+                            <tbody>{rows}</tbody>
+                        </table>
+                    </div>
+                ) : (
+                    <p className="text-center text-gray-500 mt-6 text-lg">
+                        No student data found. Try searching by a valid roll number.
+                    </p>
+                )
+            }
         </div>
     );
 }
 
 export default Search;
- 
+
 

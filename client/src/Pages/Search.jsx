@@ -44,9 +44,8 @@ function Search() {
 
             {/* SEARCH BOX SECTION */}
             <div className="flex flex-col sm:flex-row sm:items-center gap-3 mb-8 max-w-xl mx-auto">
-
-                <input
-                    type="text"
+                
+                <input type="text"
                     placeholder="Enter Roll Number"
                     value={rollno}
                     onChange={(e) => setRollno(e.target.value)}

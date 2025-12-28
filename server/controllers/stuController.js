@@ -25,6 +25,7 @@ const adminLog = async (req, res) => {
 }
 
 
+
 const homePg = (req, res) => {
     res.send("hello node")
 }
@@ -83,7 +84,6 @@ const editSave = async (req, res) => {
 }
 
 
-
 module.exports = {
     adminLog,
     homePg,
@@ -93,8 +93,9 @@ module.exports = {
     updateDisplay,
     updateDelete,
     editData,
-    editSave,
-    
+    editSave, 
 
 }
+
+
 

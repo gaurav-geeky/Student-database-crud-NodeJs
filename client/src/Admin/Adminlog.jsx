@@ -46,7 +46,7 @@ const Adminlog = () => {
             
               <img src={logo1} alt="img" className="max-h-72 md:max-h-80 w-auto object-contain" />
               <h1 className="text-xl md:text-2xl font-semibold text-center">
-                Turn your projects into reality.
+                Swami Vivekanand School, Student's Record.
               </h1>
             </div>
 

@@ -11,12 +11,14 @@ route.post('/save', stuController.savePg)
 route.get('/display', stuController.displayPg)
 route.post('/search', stuController.dataSearch)
 
-route.get('/updatedata', stuController.updateDisplay)
-route.delete('/updatedelete', stuController.updateDelete)
+route.get('/updatedata', stuController.updateDisplay)  // update jsx
+route.delete('/updatedelete', stuController.updateDelete)  // updatedelete?id 
 
-route.get('/editdisplay/:id', stuController.editData); 
-route.post('/editsave', stuController.editSave); 
+// query string
+route.get('/editdisplay/:id', stuController.editData); // editdisplay/${id}
+route.post('/editsave', stuController.editSave); // edit jsx 
 
 
 module.exports = route; 
+
 
